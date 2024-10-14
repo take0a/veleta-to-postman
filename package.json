@@ -1,7 +1,7 @@
 {
-  "name": "edit-postman",
+  "name": "veleta-to-postman",
   "version": "1.0.0",
-  "description": "edit postman collection parameters",
+  "description": "convert veleta openapi spec to postman collection",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "openapi-to-postmanv2": "^4.24.0",
     "postman-collection": "^4.5.0"
   }
 }

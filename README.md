@@ -43,6 +43,17 @@ npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.9.0
 npm notice To update run: npm install -g npm@10.9.0
 npm notice
 
+C:\JDW24A\tools\edit-postman>npm install openapi-to-postmanv2 --save
+Debugger attached.
+
+added 69 packages, and audited 86 packages in 13s
+
+10 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+Waiting for the debugger to disconnect...
+
 C:\JDW24A\tools\edit-postman>npm install postman-collection --save
 npm warn deprecated @faker-js/faker@5.5.3: Please update to a newer version.
 
