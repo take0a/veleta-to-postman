@@ -1,8 +1,25 @@
 # Getting Started
 ```
 C:\Your\Path> git clone https://github.com/take0a/veleta-to-postman.git
+Cloning into 'veleta-to-postman'...
+remote: Enumerating objects: 20, done.
+remote: Counting objects: 100% (20/20), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 20 (delta 8), reused 20 (delta 8), pack-reused 0 (from 0)
+Receiving objects: 100% (20/20), 14.20 KiB | 1.77 MiB/s, done.
+Resolving deltas: 100% (8/8), done.
+
+C:\Your\Path> cd veleta-to-postman
 
 C:\Your\Path\veleta-to-postman> npm ci 
+npm warn deprecated @faker-js/faker@5.5.3: Please update to a newer version.
+
+added 85 packages, and audited 86 packages in 10s
+
+10 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
 
 ``` 
 
@@ -76,6 +93,6 @@ added 16 packages, and audited 17 packages in 8s
 found 0 vulnerabilities
 
 C:\Your\Path\veleta-to-postman>git init 
-Initialized empty Git repository in C:/JDW24A/tools/veleta-to-postman/.git/
+Initialized empty Git repository in C:/Your/Path/veleta-to-postman/.git/
 
 ```
