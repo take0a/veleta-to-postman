@@ -1,6 +1,20 @@
-# Setup
+# Getting Started
 ```
-C:\JDW24A\tools\edit-postman>npm init
+C:\Your\Path> git clone https://github.com/take0a/veleta-to-postman.git
+
+C:\Your\Path\veleta-to-postman> npm ci 
+
+``` 
+
+# Run
+```
+C:\Your\Path\veleta-to-postman>node index.js
+
+```
+
+# Initial Setup
+```
+C:\Your\Path\veleta-to-postman>npm init
 This utility will walk you through creating a package.json file.
 It only covers the most common items, and tries to guess sensible defaults.
 
@@ -11,21 +25,21 @@ Use `npm install <pkg>` afterwards to install a package and
 save it as a dependency in the package.json file.
 
 Press ^C at any time to quit.
-package name: (edit-postman)
+package name: (veleta-to-postman)
 version: (1.0.0)
-description: edit postman collection parameters
+description: convert a veleta openapi specification to a postman collection
 entry point: (index.js)
 test command:
 git repository:
 keywords:
 author:
 license: (ISC)
-About to write to C:\JDW24A\tools\edit-postman\package.json:
+About to write to C:\Your\Path\veleta-to-postman\package.json:
 
 {
-  "name": "edit-postman",
+  "name": "veleta-to-postman",
   "version": "1.0.0",
-  "description": "edit postman collection parameters",
+  "description": "convert a veleta openapi specification to a postman collection",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -43,7 +57,7 @@ npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.9.0
 npm notice To update run: npm install -g npm@10.9.0
 npm notice
 
-C:\JDW24A\tools\edit-postman>npm install openapi-to-postmanv2 --save
+C:\Your\Path\veleta-to-postman>npm install openapi-to-postmanv2 --save
 Debugger attached.
 
 added 69 packages, and audited 86 packages in 13s
@@ -54,79 +68,14 @@ added 69 packages, and audited 86 packages in 13s
 found 0 vulnerabilities
 Waiting for the debugger to disconnect...
 
-C:\JDW24A\tools\edit-postman>npm install postman-collection --save
+C:\Your\Path\veleta-to-postman>npm install postman-collection --save
 npm warn deprecated @faker-js/faker@5.5.3: Please update to a newer version.
 
 added 16 packages, and audited 17 packages in 8s
 
 found 0 vulnerabilities
 
-C:\JDW24A\tools\edit-postman>git init 
-Initialized empty Git repository in C:/JDW24A/tools/edit-postman/.git/
-
-```
-
-# Run
-```
-C:\JDW24A\tools\edit-postman>node index.js
-Debugger attached.
-{
-  _: { postman_id: 'bff0ab4c-baec-4c41-9abf-83e88527713c' },
-  item: [
-    {
-      id: '971d11ea-376c-4508-900f-43f629241512',
-      name: 'customer(顧客マスタ)の登録',
-      request: [Object],
-      response: [Array],
-      event: [],
-      protocolProfileBehavior: [Object]
-    },
-    {
-      id: '0bc57569-d85c-412a-8347-e86e70bfafac',
-      name: 'customer(顧客マスタ)の抽出',
-      request: [Object],
-      response: [Array],
-      event: [],
-      protocolProfileBehavior: [Object]
-    },
-    {
-      id: 'eb711e79-e1a4-4094-be5e-931ee8c360a0',
-      name: 'customer(顧客マスタ)の取得',
-      request: [Object],
-      response: [Array],
-      event: [],
-      protocolProfileBehavior: [Object]
-    },
-    {
-      id: 'ef4f9f6d-3578-4623-8eca-991cec3a2fc2',
-      name: 'customer(顧客マスタ)の更新',
-      request: [Object],
-      response: [Array],
-      event: [],
-      protocolProfileBehavior: [Object]
-    },
-    {
-      id: '420f03f9-83b3-4a35-9f3a-92a696c7f08b',
-      name: 'customer(顧客マスタ)の削除',
-      request: [Object],
-      response: [Array],
-      event: [],
-      protocolProfileBehavior: [Object]
-    }
-  ],
-  event: [],
-  variable: [ { type: 'any', value: 'http://localhost:3000', key: 'baseUrl' } ],
-  info: {
-    _postman_id: 'bff0ab4c-baec-4c41-9abf-83e88527713c',
-    name: 'SampleAPI',
-    version: undefined,
-    schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json',
-    description: PostmanPropertyDescription {
-      content: 'Sample API',
-      type: 'text/plain'
-    }
-  }
-}
-Waiting for the debugger to disconnect...
+C:\Your\Path\veleta-to-postman>git init 
+Initialized empty Git repository in C:/JDW24A/tools/veleta-to-postman/.git/
 
 ```

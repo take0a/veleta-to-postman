@@ -1,7 +1,7 @@
 {
   "name": "veleta-to-postman",
   "version": "1.0.0",
-  "description": "convert veleta openapi spec to postman collection",
+  "description": "convert a veleta openapi specification to a postman collection",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
