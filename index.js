@@ -7,14 +7,14 @@ var fs = require('fs'),
 	Collection = require('postman-collection').Collection;
 
 /** input は、OpenAPI 仕様書 */
-const input = 'test/openapi.json';
+const input = '../../demo/15/openapi.json';
 /** output は、Postman Collection */
-const output = 'test/collection.json';
+const output = '../../demo/15/collection.json';
 
 /** convertString は、<string> を置換する。key は、項目名 */
 const convertString = (key) => {
 	switch (key) {
-	// 独自の変換は、ここに書く　
+	// 独自の変換は、ここに書く
 	// case 'YourKey':
 	// 	return 'YourValue';
 	default:
