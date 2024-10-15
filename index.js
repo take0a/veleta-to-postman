@@ -7,9 +7,9 @@ var fs = require('fs'),
 	Collection = require('postman-collection').Collection;
 
 /** input は、OpenAPI 仕様書 */
-const input = '../../demo/15/openapi.json';
+const input = 'test/openapi.json';
 /** output は、Postman Collection */
-const output = '../../demo/15/collection.json';
+const output = 'test/collection.json';
 
 /** convertString は、<string> を置換する。key は、項目名 */
 const convertString = (key) => {

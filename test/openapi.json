@@ -1,0 +1,278 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "SampleAPI",
+    "version": "1.0.0",
+    "description": "Sample API",
+    "license": {
+      "name": "PolyForm Shield License 1.0.0",
+      "url": "https://polyformproject.org/licenses/shield/1.0.0/"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "内部の API Server 本体"
+    }
+  ],
+  "paths": {
+    "/customer": {
+      "post": {
+        "operationId": "postCustomer",
+        "summary": "customer(顧客マスタ)の登録",
+        "description": "customer(顧客マスタ)を新規登録する",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/resource",
+                "required": [
+                  "customerId"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/resource"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "409": {
+            "description": "Conflict"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "get": {
+        "operationId": "queryCustomer",
+        "summary": "customer(顧客マスタ)の抽出",
+        "description": "customer(顧客マスタ)を検索する",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "address",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "最大件数",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 100
+            }
+          },
+          {
+            "name": "customerId",
+            "in": "query",
+            "description": "（検索済み）",
+            "schema": {
+              "type": "number",
+              "format": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/resource"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/customer/{customerId}": {
+      "get": {
+        "operationId": "getCustomer",
+        "summary": "customer(顧客マスタ)の取得",
+        "description": "識別子で指定したcustomer(顧客マスタ)を取得する",
+        "parameters": [
+          {
+            "name": "customerId",
+            "in": "path",
+            "description": "",
+            "schema": {
+              "type": "number",
+              "format": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/resource"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "operationId": "putCustomer",
+        "summary": "customer(顧客マスタ)の更新",
+        "description": "識別子で指定したcustomer(顧客マスタ)を更新する",
+        "parameters": [
+          {
+            "name": "customerId",
+            "in": "path",
+            "description": "",
+            "schema": {
+              "type": "number",
+              "format": "number"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/resource"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/resource"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "operationId": "deleteCustomer",
+        "summary": "customer(顧客マスタ)の削除",
+        "description": "識別子で指定したcustomer(顧客マスタ)を削除する",
+        "parameters": [
+          {
+            "name": "customerId",
+            "in": "path",
+            "description": "",
+            "schema": {
+              "type": "number",
+              "format": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "resource": {
+        "type": "object",
+        "properties": {
+          "customerId": {
+            "title": "顧客ID",
+            "description": "",
+            "type": "number",
+            "format": "number"
+          },
+          "name": {
+            "title": "氏名",
+            "description": "",
+            "type": "string",
+            "maxLength": 16
+          },
+          "address": {
+            "title": "住所",
+            "description": "",
+            "type": "string",
+            "maxLength": 128
+          }
+        }
+      }
+    }
+  }
+}
