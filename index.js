@@ -58,7 +58,7 @@ Converter.convert({ type: 'string', data: openapiData },
 							break;
 						case '<number>':
 						case '<integer>':
-							item.value = convertNumber(item.name);
+							item.value = String(convertNumber(item.name));
 							break;
 					}
 				});
@@ -69,7 +69,7 @@ Converter.convert({ type: 'string', data: openapiData },
 							break;
 						case '<number>':
 						case '<integer>':
-							item.value = convertNumber(item.key);
+							item.value = String(convertNumber(item.key));
 							break;
 					}
 				});
